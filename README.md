@@ -8,6 +8,10 @@ Springboot整合多数据源，AOP自由切换数据源，解决Transaction注�
 
 >Abstract javax.sql.DataSource implementation that routes getConnection() calls to one of various target DataSources based on a lookup key.The latter is usually (but not necessarily) determined through some thread-bound transaction context.
 
+
+将数据源放入Spring容器中管理,通过@Configuration @Bean的定义将datasource1，datasource2加入容器中
+并且在每个线程中定义ThreadLocal，控制每个线程的在决定使用哪个数据源时不产生冲突 **（记住必须在使用用对ThreanLocal进行clear，不然重复使用线程时有可能导致获取到旧的数据源配置）**
+
 ### 问题
 ##### 加入@Transaction后多数据源切换失败？先看下文的调用过程
 
