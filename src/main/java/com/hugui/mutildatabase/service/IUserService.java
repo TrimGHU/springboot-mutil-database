@@ -22,7 +22,7 @@ public interface IUserService{
 	
 	List<User> findAll2();
 	
-	Long add1(boolean isError, String password , String username);
+	Long add1(String password , String username);
 	
-	Long add2(boolean isError, String password , String username);
+	Long add2(String password , String username);
 }

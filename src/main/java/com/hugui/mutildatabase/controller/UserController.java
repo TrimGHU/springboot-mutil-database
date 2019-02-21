@@ -38,11 +38,11 @@ public class UserController {
 
 	@GetMapping("/add1")
 	public Object add1() {
-		return userService.add1(true, "111", "111");
+		return userService.add1("111", "111");
 	}
 
 	@GetMapping("/add2")
 	public Object add2() {
-		return userService.add2(true, "222", "222");
+		return userService.add2("222", "222");
 	}
 }

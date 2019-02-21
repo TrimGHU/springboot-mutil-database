@@ -49,16 +49,15 @@ public class UseServiceImpl implements IUserService {
 	@MyDataSource("datasource2")
 	@Transactional
 	@Override
-	public Long add2(boolean isError, String password, String username) {
+	public Long add2(String password, String username) {
 		Long id = mapper.add(password, username);
 		throw new RuntimeErrorException(new Error("error!!!!!"));
 	}
 
 	@SuppressWarnings("unused")
 	@MyDataSource
-	@Transactional
 	@Override
-	public Long add1(boolean isError, String password, String username) {
+	public Long add1(String password, String username) {
 		Long id = mapper.add(password, username);
 		throw new RuntimeErrorException(new Error("error!!!!!"));
 	}
