@@ -41,5 +41,8 @@ TransactionSynchronizationManager.getResource(dataSource)不为空[从Transactio
 > 启动服务执行run as SpringbootMutiDatabaseApplication
 
 > http://localhost:8080/user/add1 访问数据源1，未加入@Transaction，后台报错Error，但是插入成功了！
+![测试1](https://github.com/TrimGHU/springboot-mutil-database/blob/master/src/main/resources/static/add_ds1_before.png)
+![测试2](https://github.com/TrimGHU/springboot-mutil-database/blob/master/src/main/resources/static/add_ds1_after.png)
+![测试3](https://github.com/TrimGHU/springboot-mutil-database/blob/master/src/main/resources/static/add_ds1_error.png)
 
 > http://localhost:8080/user/add2 访问数据源2，加入@Transaction，后台报错Error，数据库会滚成功！
