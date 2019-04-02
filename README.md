@@ -50,3 +50,5 @@ TransactionSynchronizationManager.getResource(dataSource)不为空[从Transactio
 ![测试3](https://github.com/TrimGHU/springboot-mutil-database/blob/master/src/main/resources/static/add_ds1_error.png)
 
 > http://localhost:8080/user/add2 访问数据源2，加入@Transaction，后台报错Error，数据库会滚成功！
+
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
